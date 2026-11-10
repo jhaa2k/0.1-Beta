@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AveeLike</string>
+    <string name="status_ready">Ready to visualize</string>
+    <string name="select_audio">SELECT AUDIO</string>
+    <string name="play">PLAY</string>
+</resources>
