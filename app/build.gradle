@@ -31,6 +31,14 @@ android {
     }
 }
 
+// Kotlin's JDK 7/8 extensions were merged into kotlin-stdlib.
+// Some AndroidX dependencies still pull the old split artifacts,
+// which otherwise cause duplicate classes during D8.
+configurations.configureEach {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}
+
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.activity:activity:1.9.1'
